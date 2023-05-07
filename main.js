@@ -17,5 +17,10 @@ setTimeout(() => {
   }
 }, 6000);*/
 //2
-
+/*function changeCSS() {
+      var text = document.getElementById('text');
+      text.style.color = 'orange';
+      text.style.fontSize = '20px';
+      text.style.fontFamily = 'Comic Sans MS';
+    }*/
 
