@@ -58,3 +58,65 @@ setTimeout(() => {
 			body.style.backgroundColor = "white";
 		};
 */
+//4 завдання
+/*
+function removeSelectedOption() {
+  var selectElement = document.getElementById("mySelect");
+  var selectedOption = selectElement.options[selectElement.selectedIndex];
+  selectElement.removeChild(selectedOption);
+}*/
+//5
+/*
+var button = document.getElementById("myButton");
+var message = document.getElementById("myMessage");
+
+button.onclick = function() {
+  message.innerHTML = "I was pressed!";
+};
+
+button.onmouseover = function() {
+  message.innerHTML = "Mouse on me!";
+};
+
+button.onmouseout = function() {
+  message.innerHTML = "Mouse is not on me!";
+};*/
+//6
+/*
+let widthElement = document.getElementById("width");
+		let heightElement = document.getElementById("height");
+      window.onresize = function() {
+			widthElement.textContent = window.innerWidth;
+			heightElement.textContent = window.innerHeight;
+		};*/
+    //7
+const citiesByCountry = {
+    ger: ["Berlin", "Munich", "Frankfurt"],
+    usa: ["New York", "Los Angeles", "Chicago"],
+    ukr: ["Kyiv", "Lviv", "Odesa"]
+  };
+
+  function populateCities() {
+    const countrySelect = document.getElementById("country");
+    const citiesSelect = document.getElementById("cities");
+    const countryValue = countrySelect.value;
+    citiesSelect.innerHTML = "";
+    for (const city of citiesByCountry[countryValue]) {
+      const option = document.createElement("option");
+      option.text = city;
+      citiesSelect.add(option);
+    }
+    const countryName = countrySelect.options[countrySelect.selectedIndex].text;
+    const cityName = citiesSelect.options[citiesSelect.selectedIndex].text;
+    const result = document.getElementById("result");
+    result.innerHTML = `Selected country: ${countryName}, selected city: ${cityName}`;
+  }
+  const countrySelect = document.getElementById("country");
+  const citiesSelect = document.getElementById("cities");
+  populateCities();
+  countrySelect.addEventListener("change", populateCities);
+  citiesSelect.addEventListener("change", function() {
+    const cityName = citiesSelect.options[citiesSelect.selectedIndex].text;
+    const result = document.getElementById("result");
+    result.innerHTML = `Selected country: ${countrySelect.options[countrySelect.selectedIndex].text}, selected city: ${cityName}`;
+  });
