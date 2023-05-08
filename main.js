@@ -24,3 +24,37 @@ setTimeout(() => {
       text.style.fontFamily = 'Comic Sans MS';
     }*/
 
+// 3 завдання
+/*
+		var button1 = document.getElementById("button1");
+		var button2 = document.getElementById("button2");
+		var button3 = document.getElementById("button3");
+		var link = document.getElementById("link");
+		var body = document.getElementsByTagName("body")[0];
+
+		// Події для кнопок
+		button1.onclick = function() {
+			body.style.backgroundColor = "blue";
+		};
+
+		button2.ondblclick = function() {
+			body.style.backgroundColor = "pink";
+		};
+
+		button3.onmousedown = function() {
+			body.style.backgroundColor = "brown";
+		};
+
+		button3.onmouseup = function() {
+			body.style.backgroundColor = "white";
+		};
+
+		// Події для лінки
+		link.onmouseover = function() {
+			body.style.backgroundColor = "yellow";
+		};
+
+		link.onmouseout = function() {
+			body.style.backgroundColor = "white";
+		};
+*/
